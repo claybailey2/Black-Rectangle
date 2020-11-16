@@ -22,15 +22,15 @@ s.waitForBoot({
 	NetAddr.langPort.postln; //input this port number to the 'outgoing port' in TouchOSC on phone
 
 	//For three devices: input your phone's "local ip address" as shown in TouchOSC settings.
-	~grainNet = NetAddr("192.168.0.8"); // ME
-	~filtNet = NetAddr("192.168.0.8");//NetAddr("192.168.0.4"); // DAD
-	~strikeNet = NetAddr("192.168.0.5"); // MOM
+	~grainNet = NetAddr("192.168.0.8");   // GRAIN SYNTH CONTROLLER
+	~filtNet = NetAddr("192.168.0.8");   //  FILTER CONTROLLER
+	~strikeNet = NetAddr("192.168.0.5");//   MALLET CONTROLLER
 
 	/*
 	//for fewer devices: set the ips equal to each other as below
-	~grainNet = NetAddr("192.168.0.8", 57120); // ME
-	~filtNet = NetAddr("192.168.0.5", 57120); // MOM
-	~strikeNet = ~grainNet; // ME
+	~grainNet = NetAddr("192.168.0.8", 57120); //  GRAIN SYNTH CONTROLLER
+	~filtNet = NetAddr("192.168.0.5", 57120); //   FILTER CONTROLLER
+	~strikeNet = ~grainNet;                  //    MALLET CONTROLLER
 	*/
 
 	//The user must turn on "Accelerometer" in TouchOSC settings.
